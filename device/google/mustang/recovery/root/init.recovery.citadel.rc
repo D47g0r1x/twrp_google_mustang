@@ -1,0 +1,29 @@
+# Service definitions for Titan M2 (Citadel) hardware security module in TWRP recovery
+
+service citadeld /vendor/bin/hw/citadeld
+    class early_hal
+    user hsm
+    group hsm
+    disabled
+    seclabel u:r:recovery:s0
+
+service vendor.keymint-citadel /vendor/bin/hw/android.hardware.security.keymint-service.citadel
+    class early_hal
+    user hsm
+    group hsm drmrpc
+    disabled
+    seclabel u:r:recovery:s0
+
+service vendor.weaver_hal_aidl /vendor/bin/hw/android.hardware.weaver-service.citadel
+    class early_hal
+    user hsm
+    group hsm
+    disabled
+    seclabel u:r:recovery:s0
+
+service vendor.gatekeeper_default /vendor/bin/hw/android.hardware.gatekeeper-service.trusty
+    class early_hal
+    user system
+    group system
+    disabled
+    seclabel u:r:recovery:s0

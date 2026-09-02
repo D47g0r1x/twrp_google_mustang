@@ -1,0 +1,2 @@
+import /init.recovery.${ro.board.platform}.rc
+import /init.recovery.citadel.rc

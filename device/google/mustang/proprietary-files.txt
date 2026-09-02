@@ -1,0 +1,49 @@
+# Proprietary Titan M2 (Citadel) & Trusty Security Blobs for TWRP Phase 2 Decryption
+# Device: Pixel 10 Pro XL (mustang / laguna)
+# Target Android: 16/17 (CP2A.260805.005)
+
+# HAL Binaries
+vendor/bin/hw/citadeld
+vendor/bin/hw/android.hardware.security.keymint-service.citadel
+vendor/bin/hw/android.hardware.security.keymint-service.rust.trusty
+vendor/bin/hw/android.hardware.weaver-service.citadel
+vendor/bin/hw/android.hardware.gatekeeper-service.trusty
+
+# Init Configuration
+vendor/etc/init/citadeld.rc
+vendor/etc/init/android.hardware.security.keymint-service.citadel.rc
+vendor/etc/init/android.hardware.security.keymint-service.rust.trusty.rc
+vendor/etc/init/android.hardware.weaver-service.citadel.rc
+vendor/etc/init/android.hardware.gatekeeper-service.trusty.rc
+vendor/etc/init/android.hardware.security.secretkeeper.trusty.rc
+
+# Citadel / NOS Libraries
+vendor/lib64/libnos.so
+vendor/lib64/libnos_citadeld_proxy.so
+vendor/lib64/libnos_client_citadel.so
+vendor/lib64/libnos_datagram.so
+vendor/lib64/libnos_datagram_citadel.so
+vendor/lib64/libnos_feature.so
+vendor/lib64/libnos_transport.so
+vendor/lib64/libnosprotos.so
+vendor/lib64/nos_app_avb.so
+vendor/lib64/nos_app_keymaster.so
+vendor/lib64/nos_app_weaver.so
+
+# Hardware Security & AIDL Implementations
+vendor/lib64/android.hardware.security.keymint-V1-ndk.so
+vendor/lib64/android.hardware.security.keymint-V3-ndk.so
+vendor/lib64/android.hardware.security.keymint-V5-ndk.so
+vendor/lib64/android.hardware.security.keymint-impl.nos.so
+vendor/lib64/android.hardware.weaver-V3-ndk.so
+vendor/lib64/android.hardware.weaver-bridge.nos.so
+vendor/lib64/android.hardware.weaver-impl.nos.so
+vendor/lib64/android.hardware.weaver2-impl.nos.so
+vendor/lib64/android.hardware.gatekeeper-V1-ndk.so
+
+# Trusty TEE & Gatekeeper Libraries
+vendor/lib64/libbinder_trusty.so
+vendor/lib64/libgatekeeper.so
+vendor/lib64/libkeymint_support_V3.so
+vendor/lib64/libqfstrusty_intf.so
+vendor/lib64/libtrusty.so

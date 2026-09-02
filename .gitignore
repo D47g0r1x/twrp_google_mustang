@@ -1,0 +1,10 @@
+# Ignore raw firmware images and large dumps
+*.img
+*.bin
+*.elf
+*.tar
+*.zip
+
+# Ignore OS metadata
+.DS_Store
+Thumbs.db
