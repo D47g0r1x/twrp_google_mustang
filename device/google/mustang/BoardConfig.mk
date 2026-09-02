@@ -20,9 +20,9 @@ DEVICE_PATH := device/google/mustang
 # Build environment flags
 ALLOW_MISSING_DEPENDENCIES := true
 
-# Architecture (Strictly 64-bit only on Tensor G5 / Laguna)
+# Architecture (armv8-a compatible with armv9 cores for AOSP combo target)
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv9-a
+TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := generic
 
