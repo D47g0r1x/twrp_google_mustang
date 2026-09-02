@@ -20,4 +20,6 @@ PRODUCT_MAKEFILES := \
 
 COMMON_LUNCH_CHOICES := \
     twrp_mustang-eng \
-    twrp_mustang-userdebug
+    twrp_mustang-userdebug \
+    omni_mustang-eng \
+    omni_mustang-userdebug

@@ -19,14 +19,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
+# Inherit from TWRP configuration (handles both twrp and omni vendors)
+$(call inherit-product-if-exists, vendor/twrp/config/common.mk)
+$(call inherit-product-if-exists, vendor/omni/config/common.mk)
+
 # Inherit from device configuration
 $(call inherit-product, device/google/mustang/device.mk)
 
 # Inherit from extracted vendor proprietary blobs
 $(call inherit-product-if-exists, vendor/google/mustang/mustang-vendor.mk)
-
-# Inherit from TWRP configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
 
 PRODUCT_DEVICE := mustang
 PRODUCT_NAME := twrp_mustang

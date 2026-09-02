@@ -17,6 +17,9 @@
 
 DEVICE_PATH := device/google/mustang
 
+# Build environment flags
+ALLOW_MISSING_DEPENDENCIES := true
+
 # Architecture (Strictly 64-bit only on Tensor G5 / Laguna)
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv9-a
@@ -35,6 +38,7 @@ TARGET_USES_64_BIT_BINDER := true
 
 # Kernel & GKI settings
 TARGET_NO_KERNEL := true
+BOARD_KERNEL_IMAGE_NAME := Image
 BOARD_USES_RECOVERY_AS_BOOT := false
 
 # Boot / Vendor Boot Header v4
