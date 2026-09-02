@@ -67,6 +67,9 @@ jobs:
           # Clean broken VTS include from minimal manifest
           rm -f twrp/frameworks/base/services/core/xsd/vts/Android.mk
 
+          # Patch AOSP Makefile to prevent rsync collision on root/vendor symlink
+          sed -i 's/--exclude=cache/--exclude=cache --exclude=\/root\/vendor/g' twrp/build/make/core/Makefile
+
           cd twrp
           export ALLOW_MISSING_DEPENDENCIES=true
           source build/envsetup.sh
