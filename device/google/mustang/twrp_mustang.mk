@@ -16,7 +16,7 @@
 #
 
 # Inherit from generic 64-bit config
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
 # Inherit from device configuration
@@ -36,7 +36,6 @@ PRODUCT_MANUFACTURER := Google
 
 PRODUCT_GMS_CLIENTID_BASE := android-google
 
-# Build fingerprint matching stock CP2A.260805.005 release
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=mustang \
     TARGET_DEVICE=mustang \

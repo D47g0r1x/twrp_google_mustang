@@ -31,14 +31,7 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/recovery/root/init.recovery.mustang.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mustang.rc \
     $(DEVICE_PATH)/recovery/root/init.recovery.citadel.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.citadel.rc
 
-# Fastbootd dependencies
+# Recovery utilities
 PRODUCT_PACKAGES += \
     fastbootd \
-    android.hardware.boot-service.default_recovery-pixel \
-    android.hardware.health-service.laguna_recovery
-
-# Crypto & Decryption dependencies (Titan M2 / Citadel)
-PRODUCT_PACKAGES += \
-    qseecomd \
-    wait_for_keymaster \
-    spcomlib
+    resetprop
