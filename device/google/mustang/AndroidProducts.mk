@@ -16,7 +16,8 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_mustang.mk
+    $(LOCAL_DIR)/twrp_mustang.mk \
+    $(LOCAL_DIR)/omni_mustang.mk
 
 COMMON_LUNCH_CHOICES := \
     twrp_mustang-eng \
