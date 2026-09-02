@@ -33,12 +33,19 @@ TARGET_BOARD_PLATFORM := laguna
 TARGET_BOOTLOADER_BOARD_NAME := mustang
 TARGET_USES_64_BIT_BINDER := true
 
+# Kernel & GKI settings
+TARGET_NO_KERNEL := true
+BOARD_USES_RECOVERY_AS_BOOT := false
+
 # Boot / Vendor Boot Header v4
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_USE_LZ4 := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
+
+# Recovery fstab location
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
 # Kernel Parameters & Bootconfig from Stock Laguna Kernel
 BOARD_BOOTCONFIG := \
