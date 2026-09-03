@@ -6,9 +6,14 @@ on early-init
     chown system system /dev/trusty-ipc-dev0
 
 on init
+    # USB Controller setup
     wait /sys/devices/platform/simple_usb_bus/c450000.usb3/c400000.dwc3/driver 10
     setprop sys.usb.controller "c400000.dwc3"
     setprop sys.usb.configfs 1
+
+    # Universal block device symlinks for Magisk / KernelSU / AnyKernel3 installers
+    symlink /dev/block/platform/3c400000.ufs/by-name /dev/block/by-name
+    symlink /dev/block/platform/3c400000.ufs/by-name /dev/block/bootdevice/by-name
 
 on post-fs
     # Start citadel and keymint services if present
