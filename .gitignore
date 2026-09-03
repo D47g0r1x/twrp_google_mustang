@@ -5,6 +5,9 @@
 *.tar
 *.zip
 
+# Whitelist device tree prebuilt DTB
+!**/dtb.img
+
 # Ignore OS metadata
 .DS_Store
 Thumbs.db

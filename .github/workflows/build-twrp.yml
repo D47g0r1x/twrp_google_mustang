@@ -73,6 +73,9 @@ jobs:
           # Ensure mkbootimg receives --header_version 4 for vendor_boot v4
           sed -i 's/mkbootimg --pagesize/mkbootimg --header_version 4 --pagesize/g' twrp/build/make/core/Makefile
 
+          # Patch mkbootimg to allow vendor_boot without mandatory DTB
+          sed -i "s/raise ValueError('DTB image must not be empty.')/pass/g" twrp/system/tools/mkbootimg/mkbootimg.py
+
           cd twrp
           export ALLOW_MISSING_DEPENDENCIES=true
           source build/envsetup.sh

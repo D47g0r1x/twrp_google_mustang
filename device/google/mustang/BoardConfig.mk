@@ -49,6 +49,9 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MKBOOTIMG_ARGS += --header_version 4
 
+# Prebuilt DTB from stock vendor_kernel_boot
+TARGET_PREBUILT_DTB := $(DEVICE_PATH)/dtb.img
+
 # Recovery fstab location
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
 
