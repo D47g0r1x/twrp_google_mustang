@@ -31,7 +31,13 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/recovery/root/init.recovery.mustang.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.mustang.rc \
     $(DEVICE_PATH)/recovery/root/init.recovery.citadel.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.citadel.rc
 
-# Recovery utilities
+# Recovery utilities and disk tools
 PRODUCT_PACKAGES += \
     fastbootd \
-    resetprop
+    resetprop \
+    nano \
+    bash \
+    sgdisk \
+    e2fsck \
+    fsck.f2fs \
+    make_f2fs
