@@ -64,7 +64,6 @@ BOARD_KERNEL_CMDLINE := \
     max77779_pmic.load_sequential=1 \
     max77779_pmic_spmi.load_sequential=1 \
     max77779_pmic_pinctrl.load_sequential=1 \
-    dyndbg="func alloc_contig_dump_pages +p" \
     cma_sysfs.experimental=Y \
     cgroup.memory=nokmem \
     init_on_alloc=0 \
