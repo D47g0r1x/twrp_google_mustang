@@ -34,6 +34,9 @@ Welcome to the custom TWRP recovery project for the **Google Pixel 10 Pro XL** (
 
 ## Current Status (Beta)
 
+!!!!! CP2A.260805.005 !!!!!
+!!!!!  ONLY FOR NOW.  !!!!!
+
 - [x] **Touch & Display**: Working (native 1344x2992 resolution scaled to portrait HDPI theme).
 - [x] **ADB & Fastbootd**: Working over USB controller (`c400000.dwc3`).
 - [x] **External Storage**: USB-OTG drives (FAT32/exFAT/NTFS) mount properly.
